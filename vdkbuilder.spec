@@ -6,6 +6,7 @@ Release:	2
 License:	GPL
 Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/vdkbuilder/%{name}-%{version}.tar.gz
+# Source0-md5:	6a004c7a8ed51a30722383eb50ee69f8
 URL:		http://vdkbuilder.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
