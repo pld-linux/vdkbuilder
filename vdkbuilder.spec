@@ -46,8 +46,6 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf AUTHORS BUGS ChangeLog NEWS README TODO TUTOR* example/nls_HOWTO*
-
 %post -p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
@@ -56,7 +54,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz example/*.gz example/hello
+%doc AUTHORS BUGS ChangeLog NEWS README TODO TUTOR* example/nls_HOWTO* example/hello
 %attr(755,root,root) %{_bindir}/*
 %{_includedir}/vdkb2
 %attr(755,root,root) %{_libdir}/lib*.so*
