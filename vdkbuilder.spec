@@ -60,7 +60,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_includedir}/vdkb2
 %attr(755,root,root) %{_libdir}/lib*.so*
-%attr(755,root,root) %{_libdir}/lib*.la
+%{_libdir}/lib*.la
 %{_mandir}/man1/*
 %{_pixmapsdir}/*.png
 %{_datadir}/vdkb2
