@@ -28,7 +28,7 @@ VDKBuilder jest narzêdziem RAD bazuj±cym na VDK, bibliotece wrapuj±cej
 znan± bibliotekê widgetów - GTK+.
 
 %prep
-%setup  -q
+%setup -q
 
 %build
 #CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
