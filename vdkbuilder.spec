@@ -20,12 +20,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 VDKBuilder is a Rapid Application Development tool based on VDK - "The
-Visual Development Kit", a C++ framework that wraps famous Gtk+ widget
+Visual Development Kit", a C++ framework that wraps famous GTK+ widget
 set library.
 
 %description -l pl
 VDKBuilder jest narzêdziem RAD bazuj±cym na VDK, bibliotece wrapuj±cej
-znan± bibliotekê widgetów - Gtk+.
+znan± bibliotekê widgetów - GTK+.
 
 %prep
 %setup  -q
