@@ -7,12 +7,12 @@ License:	GPL
 Group:		Development/Tools
 Source0:	http://prdownloads.sourceforge.net/vdkbuilder/%{name}-%{version}.tar.gz
 URL:		http://vdkbuilder.sourceforge.net/
-BuildRequires:	vdk-devel >= 2.0.1
-BuildRequires:	freetype-devel
-BuildRequires:	glib2-devel >= 2.0.0
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	freetype-devel >= 2.0.0
+BuildRequires:	glib2-devel >= 2.0.0
 BuildRequires:	libtool
+BuildRequires:	vdk-devel >= 2.0.1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define         _prefix         /usr/X11R6
