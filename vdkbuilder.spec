@@ -5,7 +5,7 @@ Version:	2.0.1
 Release:	2
 License:	GPL
 Group:		Development/Tools
-Source0:	http://prdownloads.sourceforge.net/vdkbuilder/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/vdkbuilder/%{name}-%{version}.tar.gz
 URL:		http://vdkbuilder.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -31,11 +31,12 @@ znan± bibliotekê widgetów - Gtk+.
 
 %build
 #CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
-libtoolize -c -f
+%{__libtoolize}
 %{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure
+
 %{__make}
 
 %install
@@ -44,19 +45,19 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-%post -p /sbin/ldconfig
-%postun -p /sbin/ldconfig
-
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post	-p /sbin/ldconfig
+%postun	-p /sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS BUGS ChangeLog NEWS README TODO TUTOR* example/nls_HOWTO* example/hello
 %attr(755,root,root) %{_bindir}/*
-%{_includedir}/vdkb2
 %attr(755,root,root) %{_libdir}/lib*.so*
 %{_libdir}/lib*.la
+%{_includedir}/vdkb2
 %{_mandir}/man1/*
 %{_pixmapsdir}/*.png
 %{_datadir}/vdkb2
