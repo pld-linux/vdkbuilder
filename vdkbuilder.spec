@@ -2,7 +2,7 @@ Summary:	A general purpose ide for constructing gui applications using VDK
 Summary(pl):	IDE do konstruowania aplikacji graficznych u¿ywaj±cych VDK
 Name:		vdkbuilder
 Version:	2.0.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Tools
 Source0:	http://prdownloads.sourceforge.net/vdkbuilder/%{name}-%{version}.tar.gz
@@ -10,6 +10,9 @@ URL:		http://vdkbuilder.sourceforge.net/
 BuildRequires:	vdk-devel >= 2.0.1
 BuildRequires:	freetype-devel
 BuildRequires:	glib2-devel >= 2.0.0
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define         _prefix         /usr/X11R6
@@ -30,6 +33,10 @@ znan± bibliotekê widgetów - Gtk+.
 
 %build
 #CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
+libtoolize -c -f
+aclocal
+autoconf
+automake -a -c -f
 %configure
 %{__make}
 
