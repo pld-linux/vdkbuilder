@@ -34,7 +34,7 @@ znan± bibliotekê widgetów - Gtk+.
 %build
 #CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
 libtoolize -c -f
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure
