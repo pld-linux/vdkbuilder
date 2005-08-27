@@ -27,6 +27,18 @@ set library.
 VDKBuilder jest narzêdziem RAD bazuj±cym na VDK, bibliotece wrapuj±cej
 znan± bibliotekê widgetów - GTK+.
 
+%package devel
+Summary:	Header files for vdkbuilder
+Summary(pl):	Pliki nag³ówkowe bibliotek vdkbuilder
+Group:		Development/Libraries
+Requires:	%{name} = %{version}-%{release}
+
+%description devel
+vdkbuilder header files.
+
+%description devel -l pl
+Pliki nag³ówkowe blibliotek vdkbuilder.
+
 %prep
 %setup -q
 
@@ -57,8 +69,11 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS BUGS ChangeLog NEWS README TODO TUTOR* example/nls_HOWTO* example/hello
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/lib*.so*
-%{_libdir}/lib*.la
-%{_includedir}/vdkb2
 %{_mandir}/man1/*
 %{_pixmapsdir}/*.png
 %{_datadir}/vdkb2
+
+%files devel
+%defattr(644,root,root,755)
+%{_libdir}/lib*.la
+%{_includedir}/vdkb2
