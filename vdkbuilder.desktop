@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=VDK Builder IDE
+Comment=VDK Builder IDE
+Icon=vdkb2.png
+Exec=vdkb2
+Terminal=false
+Type=Application
+Categories=GTK2;Development;IDE;
+Encoding=UTF-8
+# vi: encoding=utf-8
