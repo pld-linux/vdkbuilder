@@ -1,3 +1,4 @@
+%define		_tutver	1.1
 Summary:	A general purpose ide for constructing gui applications using VDK
 Summary(pl):	IDE do konstruowania aplikacji graficznych u¿ywaj±cych VDK
 Name:		vdkbuilder
@@ -7,6 +8,9 @@ License:	GPL
 Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/vdkbuilder/%{name}2-%{version}.tar.gz
 # Source0-md5:	91216ce6659e447862b2bdc7335074fc
+Source1:	http://kent.dl.sourceforge.net/sourceforge/vdkbuilder/vdktutorial-%{_tutver}.pdf.gz
+# Source1-md5:	06d2e9b1dab6bec28d7ea3b6819dfb67
+Source2:	%{name}.desktop
 Patch0:		%{name}-ac_FLAGS.patch
 URL:		http://vdkbuilder.sourceforge.net/
 BuildRequires:	autoconf
@@ -59,6 +63,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+install %{SOURCE1} .
+install -D %{SOURCE2} $RPM_BUILD_ROOT%{_desktopdir}/%{name}.desktop
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -67,10 +74,11 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS BUGS ChangeLog NEWS README TODO example/nls_HOWTO* example/hello
+%doc AUTHORS BUGS ChangeLog NEWS README TODO example/nls_HOWTO* example/hello vdktutorial-%{_tutver}.pdf.gz
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_libdir}/lib*.so*
 %{_mandir}/man1/*
+%{_desktopdir}/%{name}.desktop
 %{_pixmapsdir}/*.png
 %{_datadir}/vdkb2
 
