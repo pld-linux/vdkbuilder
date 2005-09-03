@@ -3,7 +3,7 @@ Summary:	A general purpose ide for constructing gui applications using VDK
 Summary(pl):	IDE do konstruowania aplikacji graficznych u¿ywaj±cych VDK
 Name:		vdkbuilder
 Version:	2.4.0
-Release:	0.1
+Release:	1
 License:	GPL
 Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/vdkbuilder/%{name}2-%{version}.tar.gz
