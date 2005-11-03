@@ -8,7 +8,7 @@ License:	GPL
 Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/vdkbuilder/%{name}2-%{version}.tar.gz
 # Source0-md5:	91216ce6659e447862b2bdc7335074fc
-Source1:	http://kent.dl.sourceforge.net/sourceforge/vdkbuilder/vdktutorial-%{_tutver}.pdf.gz
+Source1:	http://dl.sourceforge.net/vdkbuilder/vdktutorial-%{_tutver}.pdf.gz
 # Source1-md5:	06d2e9b1dab6bec28d7ea3b6819dfb67
 Source2:	%{name}.desktop
 Patch0:		%{name}-ac_FLAGS.patch
