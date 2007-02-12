@@ -1,6 +1,6 @@
 %define		_tutver	1.1
 Summary:	A general purpose ide for constructing gui applications using VDK
-Summary(pl.UTF-8):   IDE do konstruowania aplikacji graficznych używających VDK
+Summary(pl.UTF-8):	IDE do konstruowania aplikacji graficznych używających VDK
 Name:		vdkbuilder
 Version:	2.4.0
 Release:	1
@@ -34,7 +34,7 @@ znaną bibliotekę widgetów - GTK+.
 
 %package devel
 Summary:	Header files for vdkbuilder
-Summary(pl.UTF-8):   Pliki nagłówkowe bibliotek vdkbuilder
+Summary(pl.UTF-8):	Pliki nagłówkowe bibliotek vdkbuilder
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
