@@ -1,6 +1,6 @@
 %define		_tutver	1.1
 Summary:	A general purpose ide for constructing gui applications using VDK
-Summary(pl):	IDE do konstruowania aplikacji graficznych u¿ywaj±cych VDK
+Summary(pl.UTF-8):   IDE do konstruowania aplikacji graficznych uÅ¼ywajÄ…cych VDK
 Name:		vdkbuilder
 Version:	2.4.0
 Release:	1
@@ -28,21 +28,21 @@ VDKBuilder is a Rapid Application Development tool based on VDK - "The
 Visual Development Kit", a C++ framework that wraps famous GTK+ widget
 set library.
 
-%description -l pl
-VDKBuilder jest narzêdziem RAD bazuj±cym na VDK, bibliotece wrapuj±cej
-znan± bibliotekê widgetów - GTK+.
+%description -l pl.UTF-8
+VDKBuilder jest narzÄ™dziem RAD bazujÄ…cym na VDK, bibliotece wrapujÄ…cej
+znanÄ… bibliotekÄ™ widgetÃ³w - GTK+.
 
 %package devel
 Summary:	Header files for vdkbuilder
-Summary(pl):	Pliki nag³ówkowe bibliotek vdkbuilder
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe bibliotek vdkbuilder
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 vdkbuilder header files.
 
-%description devel -l pl
-Pliki nag³ówkowe blibliotek vdkbuilder.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe blibliotek vdkbuilder.
 
 %prep
 %setup -q -n %{name}2-%{version}
